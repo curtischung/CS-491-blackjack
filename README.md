@@ -1,1 +1,1 @@
-# CS-491-blackjack
+Final Project Blackjack
