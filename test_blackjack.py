@@ -35,6 +35,10 @@ class TestBlackJack(unittest.TestCase):
         card = Card("spades", 1)
         self.assertTrue(isinstance(player.hand[0], type(card)))
 
+    def test_card(self):
+        card = Card("spades", 1)
+        self.assertTrue(isinstance(card, type(card)))
+
     def test_player_bust(self):
         game = Blackjack()
         player = Player("Who")
