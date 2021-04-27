@@ -1,6 +1,6 @@
-#Final Project Blackjack
+# Final Project Blackjack
 
-##DOCUMENTATION: <br />  <br />
+## DOCUMENTATION: <br />  <br />
   All files are stored in github and are built in github. 
   
   [Github](https://github.com/curtischung/CS-491-blackjack) All code is available on github.
