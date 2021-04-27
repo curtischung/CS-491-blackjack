@@ -2,7 +2,8 @@ Final Project Blackjack
 
 DOCUMENTATION: <br />  <br />
   All files are stored in github and are built in github.  <br />
-  Testings should be fully automated on a commit to the repository from the actions tab of github.  <br />
-   If all testing passes, then it should be build and zipped up as a release version on the releases tab.  <br />
-  There are no special instructions or documentations, once you commit, it should automatically test and create a new version.  <br />
+  When a commit is done on the github repository, it should automatically run the workflow of building and testing the application. <br />
+  Testing is done in the workflow of github in python-app.yml whenever a commit is done on the main branch. <br />
+  The deployment is done on Heroku, where it functions the same as the workflow testing. It deploys to heroku whenever a commit is done to the repository, and we can see the deployment succeed or fail in the environments tab of github. <br />
+  
    
