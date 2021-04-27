@@ -41,6 +41,15 @@ class TestBlackJack(unittest.TestCase):
         card2 = Card("spades", 2)
         self.assertNotEqual(card1, card2)
 
+    def test_player_showhand(self):
+        player = Player("Joe")
+        player.hand.append(Card("spades", 10))
+        self.assertTrue(player.showHand)
+
+    def test_dealerdraw(self):
+        player = Player("dealer")
+        self.assertTrue(player.dealerDraw())
+
     def test_shuffle(self):
         deck1 = Deck()
         deck2 = Deck()

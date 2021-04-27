@@ -15,6 +15,7 @@ class Player:
     def showHand(self):
         for cards in self.hand:   
             cards.show()
+        return True
     
     def handValue(self):
         total = 0
@@ -33,6 +34,7 @@ class Player:
         self.hand.append(self.deck.drawCard())
         self.hand.append(self.deck.drawCard())
         self.hidden = True
+        return True
         
     def showDealerHand(self):
         i = 0
