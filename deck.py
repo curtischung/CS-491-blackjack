@@ -15,6 +15,7 @@ class Deck:
     def show(self):
         for c in self.cards:
             c.show()
+        return True
 
     def shuffle(self):
         for i in range(len(self.cards) - 1, 0, -1):

@@ -23,6 +23,20 @@ class TestBlackJack(unittest.TestCase):
         self.assertIsNotNone(deck)
 
     def test_card_value(self):
+        card = Card("spade", 1)
+        self.assertEqual(card.cardValue(), 1)
+
+    def test_card_show(self):
+        card = Card("spades", 1)
+        card.show()
+        self.assertTrue(card.show())
+
+    def test_deck_show(self):
+        deck = Deck()
+        deck.build()
+        self.assertTrue(deck.show())
+
+    def test_card_equal(self):
         card1 = Card("spades", 1)
         card2 = Card("spades", 2)
         self.assertNotEqual(card1, card2)
