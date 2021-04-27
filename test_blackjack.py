@@ -50,6 +50,29 @@ class TestBlackJack(unittest.TestCase):
         player = Player("dealer")
         self.assertTrue(player.dealerDraw())
 
+    def test_show_dealerhand(self):
+        player = Player("dealer")
+        player.hand.append(Card("spades", 10))
+        player.hand.append(Card("spades", 10))
+        self.assertTrue(player.showDealerHand())
+    
+    def test_hand_value(self):
+        player = Player("Mama")
+        player.hand.append(Card("spades", 10))
+        self.assertEqual(player.handValue(), 10)
+
+    def test_stand_draw(self):
+        player = Player("Player")
+        player.hand.append(Card("spades", 10))
+        player.hand.append(Card("spades", 5))
+        self.assertFalse(player.playerStandDraw())
+
+    def test_stand_draw_high(self):
+        player = Player("Player")
+        player.hand.append(Card("spades", 10))
+        player.hand.append(Card("spades", 10))
+        self.assertTrue(player.playerStandDraw())
+
     def test_shuffle(self):
         deck1 = Deck()
         deck2 = Deck()

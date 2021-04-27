@@ -48,6 +48,7 @@ class Player:
                 cards.show()
 
             i+=1
+        return True
     
     def playerStandDraw(self):
         self.hidden = False
