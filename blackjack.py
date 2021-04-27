@@ -34,15 +34,18 @@ class Blackjack:
         player.showHand()
         print("Total Points: {}".format(player.handValue()))
         print()
+        return True
 
     def showDealerHand(self, player):
         print("=================")
         print("{} shows: ".format(player.name))
         player.showDealerHand()
         print()
+        return True
 
     def playerStand(self):
         self.dealer.playerStandDraw()
+        return True
 
     def checkWin(self):
         if self.player.handValue() > self.dealer.handValue() and not self.bust(self.player) :
@@ -55,6 +58,7 @@ class Blackjack:
             print("Player busts, Dealer wins!")
         elif(self.bust(self.dealer) is True):
             print("Dealer busts, Player wins!")
+        return True
 
 
 

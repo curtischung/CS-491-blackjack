@@ -109,6 +109,25 @@ class TestBlackJack(unittest.TestCase):
         player.hand = [Card("hearts", 5), Card("spades", 9)]
         self.assertEqual(player.handValue(), 14)
 
+    def test_check_win(self):
+        blackjack = Blackjack()
+        self.assertTrue(blackjack.checkWin())
+
+    def test_check_stand(self):
+        blackjack = Blackjack()
+        self.assertTrue(blackjack.playerStand())
+    
+    def test_blackjack_showhand(self):
+        blackjack = Blackjack()
+        player = Player("Class")
+        player.hand = [Card("hearts", 5), Card("spades", 9)]
+        self.assertTrue(blackjack.showHand(player))
+
+    def test_blackjack_showdealerhand(self):
+        blackjack = Blackjack()
+        player = Player("Class")
+        player.hand = [Card("hearts", 5), Card("clubs", 4)]
+        self.assertTrue(blackjack.showDealerHand(player))
 
 if __name__ == "__main__":
     unittest.main()
