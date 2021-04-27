@@ -22,6 +22,11 @@ class TestBlackJack(unittest.TestCase):
         deck.build()
         self.assertIsNotNone(deck)
 
+    def test_card_value(self):
+        card1 = Card("spades", 1)
+        card2 = Card("spades", 2)
+        self.assertNotEqual(card1, card2)
+
     def test_shuffle(self):
         deck1 = Deck()
         deck2 = Deck()
@@ -38,6 +43,10 @@ class TestBlackJack(unittest.TestCase):
     def test_card(self):
         card = Card("spades", 1)
         self.assertTrue(isinstance(card, type(card)))
+
+    def test_card_in_hand(self):
+        card = Card("spades", 1)
+        self.assertTrue(isinstance(card, type(card)), type(card))
 
     def test_player_bust(self):
         game = Blackjack()
