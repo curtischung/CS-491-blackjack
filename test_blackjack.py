@@ -55,11 +55,6 @@ class TestBlackJack(unittest.TestCase):
         player.hand.append(Card("spades", 10))
         player.hand.append(Card("spades", 10))
         self.assertTrue(player.showDealerHand())
-    
-    def test_hand_value(self):
-        player = Player("Mama")
-        player.hand.append(Card("spades", 10))
-        self.assertEqual(player.handValue(), 10)
 
     def test_stand_draw(self):
         player = Player("Player")
