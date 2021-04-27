@@ -14,6 +14,8 @@
   [Heroku Deploy](https://git.heroku.com/blackjackcs491.git) <br />
   The link doesn't really show anything, but the application itself is deployed, it's just there's no interface to properly display the blackjack game.
   
+  ![Heroku Build Log](https://github.com/curtischung/CS-491-blackjack/blob/main/HerokuLog.png)
+  
   
   
    
