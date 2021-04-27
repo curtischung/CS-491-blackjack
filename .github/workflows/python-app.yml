@@ -45,21 +45,25 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest
-        steps:
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@latest
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: version
-        release_name: Latest Version
-        body: |
-          ${{ steps.Changelog.outputs.changelog }}
-          Newest version
-        draft: false
-        prerelease: true
+        pytest 
+        
+  deploy:
+      needs: build
+      runs-on: ubuntu-latest
+      steps:
+        - name: Create Release
+          id: create_release
+          uses: actions/create-release@latest
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          with:
+            tag_name: version
+            release_name: Latest Version
+            body: |
+             ${{ steps.Changelog.outputs.changelog }}
+             Newest version
+            draft: false
+            prerelease: true
 #     - name: Publish distribution 📦 to Test PyPI
 #       uses: pypa/gh-action-pypi-publish@master
 #       with:
